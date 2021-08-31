@@ -1,8 +1,10 @@
 import socket
 
 class rocksocket:
-    def __init__(self, ip, port, server) -> None:
-        Connection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    def __init__(self, ip, port, server, Format="utf-8") -> None:
+        self.Connection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.IP = ip
+        self.PORT = port
         if server == True:
             server.bind((ip,port))
 
